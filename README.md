@@ -1,4 +1,4 @@
-# Handwritten digit recognition sing neural networks
+# Handwritten digit recognition using neural networks
 
 ## For the FMI course - Software systems with artificial intelligence
 
