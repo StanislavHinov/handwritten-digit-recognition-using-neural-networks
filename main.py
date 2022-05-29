@@ -42,9 +42,9 @@ model.add(tf.keras.layers.Dense(10, activation='softmax'))
 model.compile(optimizer='adam',
               loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 
-# Train module
+# Train module, epochs how many times is the model gonna see the same data
 
-model.fit(x_train, y_train)
+model.fit(x_train, y_train, epochs=3)
 
 # Save the module
 
