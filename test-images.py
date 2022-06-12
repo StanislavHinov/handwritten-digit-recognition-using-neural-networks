@@ -7,11 +7,12 @@ import tensorflow as tf
 model = tf.keras.models.load_model('handwritten.model')
 
 image_number = 0
-while os.path.isfile(f'/home/stanislav/repos/automated-evaluation-of-exam-sheets/test-images/{image_number}.png'):
+while os.path.isfile(f'/home/stanislav/repos/handwritten-digit-recognition-using-neural-networks/test-images/{image_number}.png'):
     try:
         # TODO channels of images? [:,:,0]
         img = cv2.imread(
-            f'/home/stanislav/repos/automated-evaluation-of-exam-sheets/test-images/{image_number}.png')[:, :, 0]
+            f'/home/stanislav/repos/handwritten-digit-recognition-using-neural-networks/test-images/{image_number}.png')[:, :, 0]
+        img = cv2.resize(img, (28,28))  
         img = np.invert(np.array([img]))
         prediction = model.predict(img)
         print(f'This digit is probably a {np.argmax(prediction)}')

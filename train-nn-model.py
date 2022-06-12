@@ -44,7 +44,7 @@ model.compile(optimizer='adam',
 
 # Train module, epochs how many times is the model gonna see the same data
 
-model.fit(x_train, y_train, epochs=3)
+model.fit(x_train, y_train, epochs=10)
 
 # Save the module
 
